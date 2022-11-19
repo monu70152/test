@@ -1,15 +1,15 @@
 env:
-  RCLONECONFIG_DRIVE: "ENCRYPTED[!cdeceea118733a00bac5d3ce19bd2f0ec84a6d3e1bcdb7068b7f8544093a5357feb1d40661ac08159a11e2b8d76b82e8!]"
-  TG_TOKEN: "ENCRYPTED[!380d0ae6a656bd12a3b9a626f7b535b42a9be4a0e04235035ee970294c8ca2dfec01f1cc43c25888acc6671fa2c3782a!]"
-  TG_CHAT_ID: "ENCRYPTED[!3fb39f1204dbca0d50a9904332a9ccf4f6477f751ea4c5aa4c3871567a652d506dc49db3e51e7bf878a1305e18924706!]"
+  RCLONECONFIG_DRIVE: "ENCRYPTED[!cdde3ad394d362949791d0966cb2c181b995d945e11f991f11b1aba28d623f190e2d5324becdd8253914b7676f0adf09!]"
+  TG_TOKEN: "ENCRYPTED[!79a071fe5353f7bd50289eb1265325be188025184059da529efd917d9419b5d0aafef9b5fe3deff17d7e191187b8224b!]"
+  TG_CHAT_ID: "ENCRYPTED[!c2d6dcaabd484297aeed248b32d68f6b45360165c6d20420bc364c557195981e893afae12a50411aaf962409bd5df319!]"
   WORKDIR: "/tmp"
-  EMAIL: "ENCRYPTED[!ff2e85e4d1636f1e7f949f06f2966a86596720e24ed80bbae30b9795bf38504ec8005322fc278ae81ad4d77f01369da3!]"
+  EMAIL: "ENCRYPTED[!b06c9ea36139ca896e50c9460e19dcd3bc8181ef9bee98d826282d6d164b92b16cb0f4b42f5cc55b4e0ee0b1db2d50ff!]"
   CIRRUS_CLONE_DEPTH: "1"
   credentials: "ENCRYPTED[!d73137109fe350b5bb8ceb974c71ded5c6f633c1200e2a97e55144dfe085facb710ce0df16282b6621e8e06a5b541e73!]"
 
 task:
   name: "Setting Up, Syncing, Building and Uploading"
-  only_if: $CIRRUS_REPO_OWNER == 'monuformirror'
+  only_if: $CIRRUS_REPO_OWNER == 'azberto'
   timeout_in: 120m
   container:
     image: anggit86/ubuntu:22.04
@@ -20,15 +20,15 @@ task:
      - ./script/load_ccache.sh
 
   Sync-rom_script:
-     - git config --global user.name "monuformirror"
+     - git config --global user.name "azberto"
      - git config --global user.email "$EMAIL"
      - echo "$credentials" > ~/.git-credentials
      - git config --global credential.helper store --file=~/.git-credentials
      - ./script/sync.sh
-     
+
   Build-rom_script:
      - ./script/building.sh
-     
+
   Ccache-info_script:
      - set -e
      - export CCACHE_DIR=$WORKDIR/ccache

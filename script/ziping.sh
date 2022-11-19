@@ -23,7 +23,7 @@ DATE_S=$(date +"%T")
 
 function upload_rom() {
 echo ━━━━━━━━━ஜ۩۞۩ஜ━━━━━━━━
-msg Upload rom..🎉🎊🥳🎊🎉
+ho gaya success emjoi boi
 echo ━━━━━━━━━ஜ۩۞۩ஜ━━━━━━━━
 cd $WORKDIR/rom/$name_rom
 engzip=$(ls out/target/product/$device/*-eng*.zip | grep -v "retrofit" || true)
@@ -56,7 +56,7 @@ echo -e \
 <b>📘 SHA1 :-</b> <code>"$(sha1sum *zip | cut -d' ' -f1)"</code>
 ━━━━━━━━━ஜ۩۞۩ஜ━━━━━━━━
 
-<b>🙇 Maintainer : "Monu"</b>
+<b>🙇 Maintainer : "SKetU"</b>
 
 <b>🆑Device Changelogs:</b>
 <b>-Kya karega changelog ka</b>
