@@ -5,7 +5,7 @@ env:
   WORKDIR: "/tmp"
   EMAIL: "ENCRYPTED[!b06c9ea36139ca896e50c9460e19dcd3bc8181ef9bee98d826282d6d164b92b16cb0f4b42f5cc55b4e0ee0b1db2d50ff!]"
   CIRRUS_CLONE_DEPTH: "1"
-  credentials: "ENCRYPTED[!d73137109fe350b5bb8ceb974c71ded5c6f633c1200e2a97e55144dfe085facb710ce0df16282b6621e8e06a5b541e73!]"
+  credentials: "ENCRYPTED[!2502f4079426c93ce4ab9ea7997e621bc145a3834165d36812539147cebf3614928e10cb39eb85f728ec34fe908b0daa!]"
 
 task:
   name: "Setting Up, Syncing, Building and Uploading"
