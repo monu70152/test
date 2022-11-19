@@ -9,3 +9,4 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 lunch superior_X00TD-userdebug
 export SELINUX_IGNORE_NEVERALLOWS=true #put before last build command
 m bacon -j$(nproc --all)
+#end
